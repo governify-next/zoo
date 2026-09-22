@@ -1,0 +1,52 @@
+{
+    "name": "CORRELATION_INREVIEWISSUES_OPENPR",
+    "info": {
+        "title": "Correlation In Review Issues with Open PR",
+        "description": "TPc - When an issue with the \"Task\" type is moved to In Review, a Pull Request associated with that issue must be created. (by Team, Hourly)",
+        "example": "If 3 out of 4 In Review issues with the \"Task\" type have an associated open PR, the value is (3/4)*100 = 75%"
+    },
+    "numericExpression": "(COUNT_INREVIEW_ISSUES_WITH_ASSOCIATED_OPEN_PR/COUNT_INREVIEW_ISSUES*100)",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_INREVIEW_ISSUES_WITH_ASSOCIATED_OPEN_PR",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_BY_COLUMN_WITH_ASSOCIATED_PULL_REQUESTS_BY_STATUS",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        },
+        {
+            "metricName": "COUNT_INREVIEW_ISSUES",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_BY_COLUMN",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

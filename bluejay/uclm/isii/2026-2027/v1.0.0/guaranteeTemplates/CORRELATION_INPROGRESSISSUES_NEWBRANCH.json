@@ -1,0 +1,52 @@
+{
+    "name": "CORRELATION_INPROGRESSISSUES_NEWBRANCH",
+    "info": {
+        "title": "Correlation In Progress Issues with New Branch",
+        "description": "TPa - When an issue with the \"Task\" type is moved to In Progress, a branch associated to this issue must be created. (by Team, Hourly)",
+        "example": "If 4 out of 5 In Progress issues with the \"Task\" type have an associated branch, the value is (4/5)*100 = 80%"
+    },
+    "numericExpression": "(COUNT_INPROGRESS_ISSUES_WITH_ASSOCIATED_BRANCHES/COUNT_INPROGRESS_ISSUES*100)",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_INPROGRESS_ISSUES_WITH_ASSOCIATED_BRANCHES",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_BY_COLUMN_WITH_ASSOCIATED_BRANCHES",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS_BASIC",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        },
+        {
+            "metricName": "COUNT_INPROGRESS_ISSUES",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_BY_COLUMN",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

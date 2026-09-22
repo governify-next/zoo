@@ -1,0 +1,33 @@
+{
+    "name": "NUMBER_DONEISSUES_WEEKLY_OVER_1",
+    "info": {
+        "title": "Number of Done Issues per Member Weekly",
+        "description": "TPf - Each developer should be finishing at least one issue with the \"Task\" type per week. (by Member, Weekly)",
+        "example": "If a member completed 2 issues with the \"Task\" type this week, the value is 2"
+    },
+    "numericExpression": "COUNT_DONEISSUES_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_DONEISSUES_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_BY_COLUMN_FILTERED_BY_PERIOD_ASSOCIATED_TO_MEMBER",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

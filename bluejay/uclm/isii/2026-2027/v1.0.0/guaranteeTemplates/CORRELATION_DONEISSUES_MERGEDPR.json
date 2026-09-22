@@ -1,0 +1,52 @@
+{
+    "name": "CORRELATION_DONEISSUES_MERGEDPR",
+    "info": {
+        "title": "Correlation Done Issues with Merged PR",
+        "description": "TPd - When an issue with the \"Task\" type is moved to Done, the Pull Request associated to the issue must be merged. (by Team, Hourly)",
+        "example": "If 3 out of 4 Done issues with the \"Task\" type have an associated merged PR, the value is (3/4)*100 = 75%"
+    },
+    "numericExpression": "(COUNT_DONE_ISSUES_WITH_ASSOCIATED_CLOSED_PR/COUNT_DONE_ISSUES*100)",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_DONE_ISSUES_WITH_ASSOCIATED_CLOSED_PR",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_BY_COLUMN_WITH_ASSOCIATED_PULL_REQUESTS_BY_STATUS",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        },
+        {
+            "metricName": "COUNT_DONE_ISSUES",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_BY_COLUMN",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

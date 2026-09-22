@@ -1,0 +1,33 @@
+{
+    "name": "NUMBER_INPROGRESSISSUES_HOURLY_UNDER_1",
+    "info": {
+        "title": "Number of In Progress Issues per Member",
+        "description": "TPe - Each developer should only be working on one issue with the \"Task\" type at a time. (by Member, Hourly)",
+        "example": "If a member has 2 issues with the \"Task\" type in In Progress, the value is 2"
+    },
+    "numericExpression": "COUNT_INPROGRESSISSUES_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_INPROGRESSISSUES_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_BY_COLUMN",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

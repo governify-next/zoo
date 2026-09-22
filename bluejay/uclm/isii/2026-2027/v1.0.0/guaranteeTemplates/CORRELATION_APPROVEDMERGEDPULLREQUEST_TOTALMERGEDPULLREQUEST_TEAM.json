@@ -1,0 +1,52 @@
+{
+    "name": "CORRELATION_APPROVEDMERGEDPULLREQUEST_TOTALMERGEDPULLREQUEST_TEAM",
+    "info": {
+        "title": "Correlation Approved Merged Pull Requests by Team",
+        "description": "TPg - Each Pull Request should be approved before merging. (by Team, Weekly)",
+        "example": "If 6 out of 8 merged PRs have at least one approved review, the value is (6/8)*100 = 75%"
+    },
+    "numericExpression": "(COUNT_MERGED_PR_WITH_POSITIVE_REVIEWS_TEAM/COUNT_PR_MERGED_TEAM*100)",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_MERGED_PR_WITH_POSITIVE_REVIEWS_TEAM",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_MERGED_PR_BY_REVIEW_STATE",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PULL_REQUESTS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        },
+        {
+            "metricName": "COUNT_PR_MERGED_TEAM",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_PR_MERGED",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PULL_REQUESTS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

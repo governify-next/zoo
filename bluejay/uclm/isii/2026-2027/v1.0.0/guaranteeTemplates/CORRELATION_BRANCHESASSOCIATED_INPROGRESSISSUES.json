@@ -1,0 +1,52 @@
+{
+    "name": "CORRELATION_BRANCHESASSOCIATED_INPROGRESSISSUES",
+    "info": {
+        "title": "Correlation Branches Associated to In Progress Issues",
+        "description": "TPb - Each issue with the \"Task\" type in In Progress must have a different branch associated with it. (by Team, Hourly)",
+        "example": "If 3 unique branches are linked to 4 In Progress issues with the \"Task\" type, the value is (3/4)*100 = 75%"
+    },
+    "numericExpression": "(COUNT_BRANCHES_ASSOCIATED_TO_INPROGRESS_ISSUES/COUNT_INPROGRESS_ISSUES*100)",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_BRANCHES_ASSOCIATED_TO_INPROGRESS_ISSUES",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_WITH_DIFFERENT_BRANCHES_BY_COLUMN",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS_BASIC",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        },
+        {
+            "metricName": "COUNT_INPROGRESS_ISSUES",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_ISSUES_BY_COLUMN",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

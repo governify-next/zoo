@@ -1,0 +1,52 @@
+{
+    "name": "CORRELATION_APPROVEDMERGEDPULLREQUEST_TOTALMERGEDPULLREQUEST_MEMBER",
+    "info": {
+        "title": "Correlation Approved Merged Pull Requests per Member",
+        "description": "TPh.1 - Each developer should only merge a Pull Request if it is approved. (by Member, Weekly)",
+        "example": "If a member merged 4 PRs and 3 had approved reviews, the value is (3/4)*100 = 75%"
+    },
+    "numericExpression": "(COUNT_MERGED_PR_WITH_POSITIVE_REVIEWS_MEMBER/COUNT_PR_MERGED_MEMBER*100)",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_MERGED_PR_WITH_POSITIVE_REVIEWS_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_MERGED_PR_BY_REVIEW_STATE",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PULL_REQUESTS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        },
+        {
+            "metricName": "COUNT_PR_MERGED_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_PR_MERGED",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PULL_REQUESTS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+{
+    "name": "tpa-UCLM-ISII-2026-2027-v1.0.0",
+    "displayName": "TPA UCLM ISII 2026-2027 v1.0.0",
+    "description": "UCLM team practices: 9 GitHub guarantees and 13 unique metrics for Task issues, branches and approved pull requests.",
+    "isPublic": true,
+    "guarantees": [
+        {
+            "guaranteeTemplateName": "CORRELATION_BRANCHESASSOCIATED_INPROGRESSISSUES",
+            "comparator": ">=",
+            "threshold": 75,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
+            "guaranteeTemplateName": "CORRELATION_INPROGRESSISSUES_NEWBRANCH",
+            "comparator": ">=",
+            "threshold": 75,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
+            "guaranteeTemplateName": "CORRELATION_INREVIEWISSUES_OPENPR",
+            "comparator": ">=",
+            "threshold": 75,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
+            "guaranteeTemplateName": "CORRELATION_DONEISSUES_MERGEDPR",
+            "comparator": ">=",
+            "threshold": 75,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_DONEISSUES_WEEKLY_OVER_1",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "week",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
+            "guaranteeTemplateName": "CORRELATION_APPROVEDMERGEDPULLREQUEST_TOTALMERGEDPULLREQUEST_MEMBER",
+            "comparator": ">=",
+            "threshold": 75,
+            "window": {
+                "period": [
+                    {
+                        "unit": "week",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_INPROGRESSISSUES_HOURLY_UNDER_1",
+            "comparator": "<=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
+            "guaranteeTemplateName": "CORRELATION_APPROVEDMERGEDPULLREQUEST_TOTALMERGEDPULLREQUEST_TEAM",
+            "comparator": ">=",
+            "threshold": 75,
+            "window": {
+                "period": [
+                    {
+                        "unit": "week",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_APPROVEDMERGEDPULLREQUEST_MEMBER",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "week",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        }
+    ]
+}
