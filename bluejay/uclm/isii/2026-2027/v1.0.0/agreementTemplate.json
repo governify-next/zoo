@@ -5,7 +5,7 @@
     "isPublic": true,
     "guarantees": [
         {
-            "guaranteeTemplateName": "CORRELATION_BRANCHESASSOCIATED_INPROGRESSISSUES",
+            "guaranteeTemplateName": "CORRELATION_INPROGRESSISSUES_NEWBRANCH",
             "comparator": ">=",
             "threshold": 75,
             "window": {
@@ -19,7 +19,7 @@
             }
         },
         {
-            "guaranteeTemplateName": "CORRELATION_INPROGRESSISSUES_NEWBRANCH",
+            "guaranteeTemplateName": "CORRELATION_BRANCHESASSOCIATED_INPROGRESSISSUES",
             "comparator": ">=",
             "threshold": 75,
             "window": {
@@ -61,34 +61,6 @@
             }
         },
         {
-            "guaranteeTemplateName": "NUMBER_DONEISSUES_WEEKLY_OVER_1",
-            "comparator": ">=",
-            "threshold": 1,
-            "window": {
-                "period": [
-                    {
-                        "unit": "week",
-                        "value": 1
-                    }
-                ],
-                "anchorDate": "2026-09-01T00:00:00.000Z"
-            }
-        },
-        {
-            "guaranteeTemplateName": "CORRELATION_APPROVEDMERGEDPULLREQUEST_TOTALMERGEDPULLREQUEST_MEMBER",
-            "comparator": ">=",
-            "threshold": 75,
-            "window": {
-                "period": [
-                    {
-                        "unit": "week",
-                        "value": 1
-                    }
-                ],
-                "anchorDate": "2026-09-01T00:00:00.000Z"
-            }
-        },
-        {
             "guaranteeTemplateName": "NUMBER_INPROGRESSISSUES_HOURLY_UNDER_1",
             "comparator": "<=",
             "threshold": 1,
@@ -103,7 +75,35 @@
             }
         },
         {
+            "guaranteeTemplateName": "NUMBER_DONEISSUES_WEEKLY_OVER_1",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "week",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
             "guaranteeTemplateName": "CORRELATION_APPROVEDMERGEDPULLREQUEST_TOTALMERGEDPULLREQUEST_TEAM",
+            "comparator": ">=",
+            "threshold": 75,
+            "window": {
+                "period": [
+                    {
+                        "unit": "week",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-01T00:00:00.000Z"
+            }
+        },
+        {
+            "guaranteeTemplateName": "CORRELATION_APPROVEDMERGEDPULLREQUEST_TOTALMERGEDPULLREQUEST_MEMBER",
             "comparator": ">=",
             "threshold": 75,
             "window": {
