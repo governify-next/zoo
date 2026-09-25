@@ -52,7 +52,7 @@ This document provides a detailed explanation on how to correctly interpret the 
 
 </div>
 
-### Implementation steps
+### Application steps
 
 1. An **issue** in the "Todo" column with the "Task" type is moved to the "In Progress" column.
 2. A new branch is created from the "In Progress" issue using the **Development** section to link it automatically.
@@ -79,9 +79,13 @@ This document provides a detailed explanation on how to correctly interpret the 
 
 If the team has **5** "In Progress" issues with the "Task" type and **4** of them have an associated branch:
 
-$$\text{Value} = \left(\frac{4}{5}\right) \times 100 = 80\text{\%}$$
+<div align="center">
 
-Since $80\text{\%} \ge 75\text{\%}$, compliance is satisfied.
+$\displaystyle \text{Value} = \left(\frac{4}{5}\right) \times 100 = 80$%
+
+</div>
+
+Since 80% ≥ 75%, compliance is satisfied.
 
 ---
 
@@ -99,7 +103,7 @@ Since $80\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 </div>
 
-### Implementation steps
+### Application steps
 
 1. An issue in the "Todo" column with the "Task" type is moved to the "In Progress" column.
 2. A new branch is created from the "In Progress" issue using the **Development** section, and will not be associated with any other issue with the "Task" type.
@@ -126,9 +130,13 @@ Since $80\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 If the team has **3** unique branches linked to **4** "In Progress" issues with the "Task" type:
 
-$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{\%}$$
+<div align="center">
 
-Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
+$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75$%
+
+</div>
+
+Since 75% ≥ 75%, compliance is satisfied.
 
 ---
 
@@ -146,7 +154,7 @@ Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 </div>
 
-### Implementation steps
+### Application steps
 
 1. An issue in the "In Progress" column with the "Task" type is moved to the "In Review" column.
 2. A **pull request** is created.
@@ -176,9 +184,13 @@ Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 If the team has **4** "In Review" issues with the "Task" type and **3** of them have an associated open pull request:
 
-$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{\%}$$
+<div align="center">
 
-Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
+$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75$%
+
+</div>
+
+Since 75% ≥ 75%, compliance is satisfied.
 
 ---
 
@@ -196,7 +208,7 @@ Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 </div>
 
-### Implementation steps
+### Application steps
 
 1. An issue in the "In Review" column with the "Task" type is moved to the "Done" column.
 2. The pull request associated to the issue is merged.
@@ -224,9 +236,13 @@ Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 If the team has **4** "Done" issues with the "Task" type and **3** of them have an associated merged pull request:
 
-$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{\%}$$
+<div align="center">
 
-Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
+$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75$%
+
+</div>
+
+Since 75% ≥ 75%, compliance is satisfied.
 
 ---
 
@@ -244,7 +260,7 @@ Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 </div>
 
-### Implementation steps
+### Application steps
 
 1. An issue with the "Task" type is moved to the "In Progress" column only if we are not working on another task.
 
@@ -286,7 +302,7 @@ If Alexander has **2** "In Progress" issues with the "Task" type, the value is *
 
 </div>
 
-### Implementation steps
+### Application steps
 
 1. An issue with the "Task" type is moved to the “Done" column.
 
@@ -327,7 +343,7 @@ If Paul completed **2** "Done" issues with the "Task" type this week, the value 
 
 </div>
 
-### Implementation steps
+### Application steps
 
 1. A pull request is created by a member.
 2. A different member reviews the pull request with an approval review.
@@ -356,9 +372,13 @@ If Paul completed **2** "Done" issues with the "Task" type this week, the value 
 
 If the team has **8** merged pull requests this week and **6** of them have at least one approved review:
 
-$$\text{Value} = \left(\frac{6}{8}\right) \times 100 = 75\text{\%}$$
+<div align="center">
 
-Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
+$\displaystyle \text{Value} = \left(\frac{6}{8}\right) \times 100 = 75$%
+
+</div>
+
+Since 75% ≥ 75%, compliance is satisfied.
 
 ---
 
@@ -376,7 +396,7 @@ Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 </div>
 
-### Implementation steps
+### Application steps
 
 1. A pull request is created by a member.
 2. A different member reviews the pull request with an approval review.
@@ -405,9 +425,13 @@ Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 If John merged **4** pull requests this week and **3** of them had approved reviews:
 
-$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{\%}$$
+<div align="center">
 
-Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
+$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75$%
+
+</div>
+
+Since 75% ≥ 75%, compliance is satisfied.
 
 ---
 
@@ -425,7 +449,7 @@ Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 </div>
 
-### Implementation steps
+### Application steps
 
 1. A pull request is created by a member.
 2. A different member reviews the pull request with an approval review.
