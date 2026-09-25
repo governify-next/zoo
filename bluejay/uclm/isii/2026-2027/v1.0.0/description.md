@@ -81,7 +81,7 @@ If the team has **5** "In Progress" issues with the "Task" type and **4** of the
 
 <div align="center">
 
-$\displaystyle \text{Value} = \left(\frac{4}{5}\right) \times 100 = 80$%
+$\displaystyle \text{Value} = \left(\frac{4}{5}\right) \times 100 = 80\text{％}$
 
 </div>
 
@@ -132,7 +132,7 @@ If the team has **3** unique branches linked to **4** "In Progress" issues with 
 
 <div align="center">
 
-$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75$%
+$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{％}$
 
 </div>
 
@@ -186,7 +186,7 @@ If the team has **4** "In Review" issues with the "Task" type and **3** of them 
 
 <div align="center">
 
-$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75$%
+$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{％}$
 
 </div>
 
@@ -238,7 +238,7 @@ If the team has **4** "Done" issues with the "Task" type and **3** of them have 
 
 <div align="center">
 
-$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75$%
+$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{％}$
 
 </div>
 
@@ -374,7 +374,7 @@ If the team has **8** merged pull requests this week and **6** of them have at l
 
 <div align="center">
 
-$\displaystyle \text{Value} = \left(\frac{6}{8}\right) \times 100 = 75$%
+$\displaystyle \text{Value} = \left(\frac{6}{8}\right) \times 100 = 75\text{％}$
 
 </div>
 
@@ -427,7 +427,7 @@ If John merged **4** pull requests this week and **3** of them had approved revi
 
 <div align="center">
 
-$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75$%
+$\displaystyle \text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{％}$
 
 </div>
 
