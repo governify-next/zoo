@@ -79,9 +79,9 @@ This document provides a detailed explanation on how to correctly interpret the 
 
 If the team has **5** "In Progress" issues with the "Task" type and **4** of them have an associated branch:
 
-$$\text{Value} = \left(\frac{4}{5}\right) \times 100 = 80\%$$
+$$\text{Value} = \left(\frac{4}{5}\right) \times 100 = 80\text{\%}$$
 
-Since $80\% \ge 75\%$, compliance is satisfied.
+Since $80\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 ---
 
@@ -126,9 +126,9 @@ Since $80\% \ge 75\%$, compliance is satisfied.
 
 If the team has **3** unique branches linked to **4** "In Progress" issues with the "Task" type:
 
-$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\%$$
+$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{\%}$$
 
-Since $75\% \ge 75\%$, compliance is satisfied.
+Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 ---
 
@@ -176,9 +176,9 @@ Since $75\% \ge 75\%$, compliance is satisfied.
 
 If the team has **4** "In Review" issues with the "Task" type and **3** of them have an associated open pull request:
 
-$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\%$$
+$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{\%}$$
 
-Since $75\% \ge 75\%$, compliance is satisfied.
+Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 ---
 
@@ -224,9 +224,9 @@ Since $75\% \ge 75\%$, compliance is satisfied.
 
 If the team has **4** "Done" issues with the "Task" type and **3** of them have an associated merged pull request:
 
-$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\%$$
+$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{\%}$$
 
-Since $75\% \ge 75\%$, compliance is satisfied.
+Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 ---
 
@@ -356,9 +356,9 @@ If Paul completed **2** "Done" issues with the "Task" type this week, the value 
 
 If the team has **8** merged pull requests this week and **6** of them have at least one approved review:
 
-$$\text{Value} = \left(\frac{6}{8}\right) \times 100 = 75\%$$
+$$\text{Value} = \left(\frac{6}{8}\right) \times 100 = 75\text{\%}$$
 
-Since $75\% \ge 75\%$, compliance is satisfied.
+Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 ---
 
@@ -405,9 +405,9 @@ Since $75\% \ge 75\%$, compliance is satisfied.
 
 If John merged **4** pull requests this week and **3** of them had approved reviews:
 
-$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\%$$
+$$\text{Value} = \left(\frac{3}{4}\right) \times 100 = 75\text{\%}$$
 
-Since $75\% \ge 75\%$, compliance is satisfied.
+Since $75\text{\%} \ge 75\text{\%}$, compliance is satisfied.
 
 ---
 
