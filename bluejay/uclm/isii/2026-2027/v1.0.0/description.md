@@ -42,11 +42,15 @@ This document provides a detailed explanation on how to correctly interpret the 
 
 > **Rule:** When an issue with the "Task" type is moved to "In Progress", a branch associated to this issue must be created.
 
+<div align="center">
+
 | Specification |                                          |
 | :------------ | :--------------------------------------- |
 | **Guarantee** | `CORRELATION_INPROGRESSISSUES_NEWBRANCH` |
 | **Scope**     | Team                                     |
 | **Period**    | Hourly                                   |
+
+</div>
 
 ### Implementation steps
 
@@ -85,11 +89,15 @@ Since $80\% \ge 75\%$, compliance is satisfied.
 
 > **Rule:** Each issue with the "Task" type in In Progress must have a different branch associated with it.
 
+<div align="center">
+
 | Specification |                                                   |
 | :------------ | :------------------------------------------------ |
 | **Guarantee** | `CORRELATION_BRANCHESASSOCIATED_INPROGRESSISSUES` |
 | **Scope**     | Team                                              |
 | **Period**    | Hourly                                            |
+
+</div>
 
 ### Implementation steps
 
@@ -128,11 +136,15 @@ Since $75\% \ge 75\%$, compliance is satisfied.
 
 > **Rule:** When an issue with the "Task" type is moved to In Review, a Pull Request associated to that issue must be created.
 
+<div align="center">
+
 | Specification |                                     |
 | :------------ | :---------------------------------- |
 | **Guarantee** | `CORRELATION_INREVIEWISSUES_OPENPR` |
 | **Scope**     | Team                                |
 | **Period**    | Hourly                              |
+
+</div>
 
 ### Implementation steps
 
@@ -174,11 +186,15 @@ Since $75\% \ge 75\%$, compliance is satisfied.
 
 > **Rule:** When an issue with the 'Task' type is moved to Done, the Pull Request associated to the issue must be merged.
 
+<div align="center">
+
 | Specification |                                   |
 | :------------ | :-------------------------------- |
 | **Guarantee** | `CORRELATION_DONEISSUES_MERGEDPR` |
 | **Scope**     | Team                              |
 | **Period**    | Hourly                            |
+
+</div>
 
 ### Implementation steps
 
@@ -218,11 +234,15 @@ Since $75\% \ge 75\%$, compliance is satisfied.
 
 > **Rule:** A developer should only be working on one issue with the "Task" type at a time.
 
+<div align="center">
+
 | Specification |                                          |
 | :------------ | :--------------------------------------- |
 | **Guarantee** | `NUMBER_INPROGRESSISSUES_HOURLY_UNDER_1` |
 | **Scope**     | Member                                   |
 | **Period**    | Hourly                                   |
+
+</div>
 
 ### Implementation steps
 
@@ -256,11 +276,15 @@ If Alexander has **2** "In Progress" issues with the "Task" type, the value is *
 
 > **Rule:** Each developer should be finishing at least 1 issue with the 'Task' type per week.
 
+<div align="center">
+
 | Specification |                                   |
 | :------------ | :-------------------------------- |
 | **Guarantee** | `NUMBER_DONEISSUES_WEEKLY_OVER_1` |
 | **Scope**     | Member                            |
 | **Period**    | Weekly                            |
+
+</div>
 
 ### Implementation steps
 
@@ -293,11 +317,15 @@ If Paul completed **2** "Done" issues with the "Task" type this week, the value 
 
 > **Rule:** Each Pull Request should be approved before merging.
 
+<div align="center">
+
 | Specification |                                                                     |
 | :------------ | :------------------------------------------------------------------ |
 | **Guarantee** | `CORRELATION_APPROVEDMERGEDPULLREQUEST_TOTALMERGEDPULLREQUEST_TEAM` |
 | **Scope**     | Team                                                                |
 | **Period**    | Weekly                                                              |
+
+</div>
 
 ### Implementation steps
 
@@ -338,11 +366,15 @@ Since $75\% \ge 75\%$, compliance is satisfied.
 
 > **Rule:** Each developer should only merge a Pull Request if it is approved by his teammates.
 
+<div align="center">
+
 | Specification |                                                                       |
 | :------------ | :-------------------------------------------------------------------- |
 | **Guarantee** | `CORRELATION_APPROVEDMERGEDPULLREQUEST_TOTALMERGEDPULLREQUEST_MEMBER` |
 | **Scope**     | Member                                                                |
 | **Period**    | Weekly                                                                |
+
+</div>
 
 ### Implementation steps
 
@@ -383,11 +415,15 @@ Since $75\% \ge 75\%$, compliance is satisfied.
 
 > **Rule:** Each developer must merge at least one pull request approved by his teammates per week.
 
+<div align="center">
+
 | Specification |                                           |
 | :------------ | :---------------------------------------- |
 | **Guarantee** | `NUMBER_APPROVEDMERGEDPULLREQUEST_MEMBER` |
 | **Scope**     | Member                                    |
 | **Period**    | Weekly                                    |
+
+</div>
 
 ### Implementation steps
 
