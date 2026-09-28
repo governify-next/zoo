@@ -17,7 +17,7 @@
                     "eventId": "EV_GITHUB_ISSUES_BY_COLUMN_WITH_ASSOCIATED_BRANCHES",
                     "fetcherConfigs": [
                         {
-                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS_BASIC",
+                            "fetcherId": "FT_GQL_GITHUB_PROJECTV2_ITEMS",
                             "fetcherConfig": null
                         }
                     ],
