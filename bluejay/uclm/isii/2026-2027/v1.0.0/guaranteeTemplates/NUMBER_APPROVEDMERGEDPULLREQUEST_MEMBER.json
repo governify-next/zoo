@@ -1,33 +1,33 @@
 {
-  "name": "NUMBER_APPROVEDMERGEDPULLREQUEST_MEMBER",
-  "info": {
-    "title": "Number of Approved Merged PRs per Member",
-    "description": "TPh.2 - Each developer must merge at least one pull request approved by his teammates per week. (by Member, Weekly)",
-    "example": "If a member merged 3 PRs and 2 had approved reviews, the value is 2"
-  },
-  "numericExpression": "COUNT_MERGED_PR_WITH_POSITIVE_REVIEWS_MEMBER",
-  "comparator": null,
-  "threshold": null,
-  "window": null,
-  "metrics": [
-    {
-      "metricName": "COUNT_MERGED_PR_WITH_POSITIVE_REVIEWS_MEMBER",
-      "metricConfig": {
-        "event": {
-          "eventId": "EV_GITHUB_MERGED_PR_BY_REVIEW_STATE",
-          "fetcherConfigs": [
-            {
-              "fetcherId": "FT_GQL_GITHUB_PULL_REQUESTS",
-              "fetcherConfig": null
+    "name": "NUMBER_APPROVEDMERGEDPULLREQUEST_MEMBER",
+    "info": {
+        "title": "Number of Approved Merged PRs per Member",
+        "description": "TPh.2 - Each developer must merge at least one pull request approved by his teammates per week. (by Member, Weekly)",
+        "example": "If a member merged 3 PRs and 2 had approved reviews, the value is 2"
+    },
+    "numericExpression": "COUNT_MERGED_PR_WITH_POSITIVE_REVIEWS_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_MERGED_PR_WITH_POSITIVE_REVIEWS_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITHUB_MERGED_PR_BY_REVIEW_STATE",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITHUB_PULL_REQUESTS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
             }
-          ],
-          "processConfig": null
-        },
-        "aggregation": {
-          "aggregatorType": "count",
-          "aggregatorConfig": {}
         }
-      }
-    }
-  ]
+    ]
 }

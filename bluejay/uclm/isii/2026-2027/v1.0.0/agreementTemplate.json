@@ -16,7 +16,8 @@
                     }
                 ],
                 "anchorDate": "2026-09-20T22:00:00.000Z"
-            }
+            },
+            "evolutiveWindow": null
         },
         {
             "guaranteeTemplateName": "CORRELATION_BRANCHESASSOCIATED_INPROGRESSISSUES",
@@ -30,7 +31,8 @@
                     }
                 ],
                 "anchorDate": "2026-09-20T22:00:00.000Z"
-            }
+            },
+            "evolutiveWindow": null
         },
         {
             "guaranteeTemplateName": "CORRELATION_INREVIEWISSUES_OPENPR",
@@ -44,7 +46,8 @@
                     }
                 ],
                 "anchorDate": "2026-09-20T22:00:00.000Z"
-            }
+            },
+            "evolutiveWindow": null
         },
         {
             "guaranteeTemplateName": "CORRELATION_DONEISSUES_MERGEDPR",
@@ -58,7 +61,8 @@
                     }
                 ],
                 "anchorDate": "2026-09-20T22:00:00.000Z"
-            }
+            },
+            "evolutiveWindow": null
         },
         {
             "guaranteeTemplateName": "NUMBER_INPROGRESSISSUES_HOURLY_UNDER_1",
@@ -72,7 +76,8 @@
                     }
                 ],
                 "anchorDate": "2026-09-20T22:00:00.000Z"
-            }
+            },
+            "evolutiveWindow": null
         },
         {
             "guaranteeTemplateName": "NUMBER_DONEISSUES_WEEKLY_OVER_1",
@@ -82,6 +87,15 @@
                 "period": [
                     {
                         "unit": "week",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-20T22:00:00.000Z"
+            },
+            "evolutiveWindow": {
+                "period": [
+                    {
+                        "unit": "hour",
                         "value": 1
                     }
                 ],
@@ -100,6 +114,15 @@
                     }
                 ],
                 "anchorDate": "2026-09-20T22:00:00.000Z"
+            },
+            "evolutiveWindow": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-20T22:00:00.000Z"
             }
         },
         {
@@ -114,6 +137,15 @@
                     }
                 ],
                 "anchorDate": "2026-09-20T22:00:00.000Z"
+            },
+            "evolutiveWindow": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-20T22:00:00.000Z"
             }
         },
         {
@@ -124,6 +156,15 @@
                 "period": [
                     {
                         "unit": "week",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-09-20T22:00:00.000Z"
+            },
+            "evolutiveWindow": {
+                "period": [
+                    {
+                        "unit": "hour",
                         "value": 1
                     }
                 ],
