@@ -1,15 +1,15 @@
 {
     "testedWith": {
-        "fetcher": "v1.2.1",
-        "computer": "v1.1.1",
-        "authenticator": "v1.2.0",
-        "scope-manager": "v1.2.0",
-        "registry": "v1.1.1",
-        "director": "v1.1.1",
-        "reporter": "v1.1.1",
-        "reporter-grafana": "v1.1.1",
-        "frontend": "v1.3.0",
-        "join-frontend": "v1.1.1",
-        "join-backend": "v1.2.0"
+        "authenticator": "v1.3.0",
+        "scope-manager": "v1.3.0",
+        "registry": "v1.2.0",
+        "computer": "v1.2.0",
+        "fetcher": "v1.3.0",
+        "director": "v1.2.0",
+        "reporter": "v1.2.0",
+        "reporter-grafana": "v1.2.0",
+        "frontend": "v1.4.0",
+        "join-frontend": "v1.2.0",
+        "join-backend": "v1.3.0"
     }
 }
