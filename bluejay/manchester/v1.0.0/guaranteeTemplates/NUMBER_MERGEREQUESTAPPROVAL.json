@@ -1,0 +1,37 @@
+{
+    "name": "NUMBER_MERGESREQUESTAPPROVALS_MEMBER",
+    "info": {
+        "title": "TP5.2 - Number of Approvals Submitted on Merge Requests per Member",
+        "description": "Submit at least one approval on a merge request each week. (by Member, Weekly)",
+        "example": "If a member submitted 2 approvals on merge requests this week, the value is 2"
+    },
+    "numericExpression": "COUNT_MERGE_REQUEST_APPROVALS_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_MERGE_REQUEST_APPROVALS_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITLAB_MERGE_REQUEST_APPROVALS",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_REST_GITLAB_MERGE_REQUESTS",
+                            "fetcherConfig": null
+                        },
+                        {
+                            "fetcherId": "FT_REST_GITLAB_MERGE_REQUEST_APPROVALS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

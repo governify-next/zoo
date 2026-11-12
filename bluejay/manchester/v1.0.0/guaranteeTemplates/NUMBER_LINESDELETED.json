@@ -1,0 +1,41 @@
+{
+    "name": "NUMBER_LINESDELETED_MEMBER",
+    "info": {
+        "title": "TP2.2 - Number of Lines Deleted per Member",
+        "description": "Delete at least one line of code each week. Sum deletions across commits. (by Member, Weekly)",
+        "example": "If a member deleted 10 and 5 lines in two distinct commits this week, the value is 15"
+    },
+    "numericExpression": "SUM_LINES_DELETED_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "SUM_LINES_DELETED_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITLAB_LINES_COMMITS",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_REST_GITLAB_COMMITS",
+                            "fetcherConfig": {
+                                "baseUrl": "",
+                                "projectPath": "",
+                                "token": ""
+                            }
+                        }
+                    ],
+                    "processConfig": {
+                        "username": ""
+                    }
+                },
+                "aggregation": {
+                    "aggregatorType": "sum",
+                    "aggregatorConfig": {
+                        "numericFieldPath": "stats.deletions"
+                    }
+                }
+            }
+        }
+    ]
+}

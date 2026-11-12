@@ -1,0 +1,41 @@
+{
+    "name": "NUMBER_LINESADDED_MEMBER",
+    "info": {
+        "title": "TP2.1 - Number of Lines Added per Member",
+        "description": "Add at least one line of code each week. Sum additions across commits. (by Member, Weekly)",
+        "example": "If a member added 10 and 5 lines in two distinct commits this week, the value is 15"
+    },
+    "numericExpression": "SUM_LINES_ADDED_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "SUM_LINES_ADDED_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITLAB_LINES_COMMITS",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_REST_GITLAB_COMMITS",
+                            "fetcherConfig": {
+                                "baseUrl": "",
+                                "projectPath": "",
+                                "token": ""
+                            }
+                        }
+                    ],
+                    "processConfig": {
+                        "username": ""
+                    }
+                },
+                "aggregation": {
+                    "aggregatorType": "sum",
+                    "aggregatorConfig": {
+                        "numericFieldPath": "stats.additions"
+                    }
+                }
+            }
+        }
+    ]
+}

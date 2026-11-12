@@ -1,0 +1,33 @@
+{
+    "name": "GITLAB_NUMBER_CLOSEDITEMS_MEMBER",
+    "info": {
+        "title": "TP6 - Number of Closed Items per Member",
+        "description": "Close at least one assigned item each week. (by Member, Weekly)",
+        "example": "If a member has 2 distinct assigned items closed this week, the value is 2"
+    },
+    "numericExpression": "COUNT_CLOSED_ITEMS_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_CLOSED_ITEMS_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITLAB_ITEMS_CLOSED",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_GQL_GITLAB_ITEMS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

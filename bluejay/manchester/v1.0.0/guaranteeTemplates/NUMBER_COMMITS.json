@@ -1,0 +1,39 @@
+{
+    "name": "NUMBER_COMMITS_MEMBER",
+    "info": {
+        "title": "TP1 - Number of Commits per Member",
+        "description": "Make at least one contribution commit each week. (by Member, Weekly)",
+        "example": "If a member made 3 commits this week, the value is 3"
+    },
+    "numericExpression": "COUNT_COMMITS_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_COMMITS_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITLAB_COMMITS",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_REST_GITLAB_COMMITS",
+                            "fetcherConfig": {
+                                "baseUrl": "",
+                                "projectPath": "",
+                                "token": ""
+                            }
+                        }
+                    ],
+                    "processConfig": {
+                        "username": ""
+                    }
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

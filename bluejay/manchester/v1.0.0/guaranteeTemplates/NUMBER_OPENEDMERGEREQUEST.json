@@ -1,0 +1,39 @@
+{
+    "name": "NUMBER_OPENEDMERGEREQUEST_MEMBER",
+    "info": {
+        "title": "TP3 - Number of Merge Requests Opened per Member",
+        "description": "Open at least one merge request each week. (by Member, Weekly)",
+        "example": "If a member opened 2 merge requests this week, including one already merged, the value is 2"
+    },
+    "numericExpression": "COUNT_MERGE_REQUEST_OPENED_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_MERGE_REQUEST_OPENED_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITLAB_MERGE_REQUEST_OPENED",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_REST_GITLAB_MERGE_REQUESTS",
+                            "fetcherConfig": {
+                                "baseUrl": "",
+                                "projectPath": "",
+                                "token": ""
+                            }
+                        }
+                    ],
+                    "processConfig": {
+                        "username": ""
+                    }
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

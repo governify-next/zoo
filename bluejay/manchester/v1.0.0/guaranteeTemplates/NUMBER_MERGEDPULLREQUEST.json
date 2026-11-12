@@ -1,0 +1,39 @@
+{
+    "name": "NUMBER_MERGEDMERGEREQUEST_MEMBER",
+    "info": {
+        "title": "TP4 - Number of Merge Requests Merged per Member",
+        "description": "Get at least one authored pull request merged each week. (by Member, Weekly)",
+        "example": "If a member authored 2 pull requests merged this week, even though they were opened earlier, the value is 2"
+    },
+    "numericExpression": "COUNT_MERGE_REQUEST_MERGED_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_MERGE_REQUEST_MERGED_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITLAB_MERGE_REQUEST_MERGED",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_REST_GITLAB_MERGE_REQUESTS",
+                            "fetcherConfig": {
+                                "baseUrl": "",
+                                "projectPath": "",
+                                "token": ""
+                            }
+                        }
+                    ],
+                    "processConfig": {
+                        "username": ""
+                    }
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}

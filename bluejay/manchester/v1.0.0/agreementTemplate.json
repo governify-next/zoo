@@ -1,0 +1,128 @@
+{
+    "name": "tpa-Manchester-v1-0-0",
+    "displayName": "TPA Manchester v1.0.0",
+    "description": "Manchester team practices: 8 GitLab guarantees per member for commits, lines added and deleted, merge requests, comments, approvals and closed items. All guarantees are evaluated hourly with an objective of at least 1.",
+    "isPublic": true,
+    "guarantees": [
+        {
+            "guaranteeTemplateName": "NUMBER_COMMITS_MEMBER",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-11-12T00:00:00.000Z"
+            },
+            "evolutiveWindow": null
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_LINESADDED_MEMBER",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-11-12T00:00:00.000Z"
+            },
+            "evolutiveWindow": null
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_LINESDELETED_MEMBER",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-11-12T00:00:00.000Z"
+            },
+            "evolutiveWindow": null
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_OPENEDMERGEREQUEST_MEMBER",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-11-12T00:00:00.000Z"
+            },
+            "evolutiveWindow": null
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_MERGEDMERGEREQUEST_MEMBER",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-11-12T00:00:00.000Z"
+            },
+            "evolutiveWindow": null
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_MERGEREQUESTCOMMENTS_MEMBER",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-11-12T00:00:00.000Z"
+            },
+            "evolutiveWindow": null
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_MERGESREQUESTAPPROVALS_MEMBER",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-11-12T00:00:00.000Z"
+            },
+            "evolutiveWindow": null
+        },
+        {
+            "guaranteeTemplateName": "NUMBER_CLOSEDITEMS_MEMBER",
+            "comparator": ">=",
+            "threshold": 1,
+            "window": {
+                "period": [
+                    {
+                        "unit": "hour",
+                        "value": 1
+                    }
+                ],
+                "anchorDate": "2026-11-12T00:00:00.000Z"
+            },
+            "evolutiveWindow": null
+        }
+    ]
+}

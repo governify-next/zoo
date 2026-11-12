@@ -1,0 +1,37 @@
+{
+    "name": "NUMBER_MERGEREQUESTCOMMENTS_MEMBER",
+    "info": {
+        "title": "TP5.1 - Number of Comments Posted on Merge Requests per Member",
+        "description": "Post at least one comment on a merge request each week. Count by comment submission date and attribute to the comment author. Exclude system-generated notes. TP5 also requires TP5.2. (by Member, Weekly)",
+        "example": "If a member posted 3 comments on merge requests this week, the value is 3"
+    },
+    "numericExpression": "COUNT_MERGE_REQUEST_COMMENTS_MEMBER",
+    "comparator": null,
+    "threshold": null,
+    "window": null,
+    "metrics": [
+        {
+            "metricName": "COUNT_MERGE_REQUEST_COMMENTS_MEMBER",
+            "metricConfig": {
+                "event": {
+                    "eventId": "EV_GITLAB_MERGE_REQUEST_COMMENTS",
+                    "fetcherConfigs": [
+                        {
+                            "fetcherId": "FT_REST_GITLAB_MERGE_REQUESTS",
+                            "fetcherConfig": null
+                        },
+                        {
+                            "fetcherId": "FT_REST_GITLAB_MERGE_REQUEST_DISCUSSIONS",
+                            "fetcherConfig": null
+                        }
+                    ],
+                    "processConfig": null
+                },
+                "aggregation": {
+                    "aggregatorType": "count",
+                    "aggregatorConfig": {}
+                }
+            }
+        }
+    ]
+}
