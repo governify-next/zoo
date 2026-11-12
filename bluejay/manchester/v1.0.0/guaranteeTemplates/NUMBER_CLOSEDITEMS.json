@@ -1,5 +1,5 @@
 {
-    "name": "GITLAB_NUMBER_CLOSEDITEMS_MEMBER",
+    "name": "NUMBER_CLOSEDITEMS_MEMBER",
     "info": {
         "title": "TP6 - Number of Closed Items per Member",
         "description": "Close at least one assigned item each week. (by Member, Weekly)",
@@ -17,7 +17,7 @@
                     "eventId": "EV_GITLAB_ITEMS_CLOSED",
                     "fetcherConfigs": [
                         {
-                            "fetcherId": "FT_GQL_GITLAB_ITEMS",
+                            "fetcherId": "FT_REST_GITLAB_ITEMS",
                             "fetcherConfig": null
                         }
                     ],

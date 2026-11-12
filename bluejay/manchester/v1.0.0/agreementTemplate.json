@@ -95,7 +95,7 @@
             "evolutiveWindow": null
         },
         {
-            "guaranteeTemplateName": "NUMBER_MERGESREQUESTAPPROVALS_MEMBER",
+            "guaranteeTemplateName": "NUMBER_MERGEREQUESTAPPROVALS_MEMBER",
             "comparator": ">=",
             "threshold": 1,
             "window": {

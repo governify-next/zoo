@@ -14,20 +14,14 @@
             "metricName": "SUM_LINES_DELETED_MEMBER",
             "metricConfig": {
                 "event": {
-                    "eventId": "EV_GITLAB_LINES_COMMITS",
+                    "eventId": "EV_GITLAB_COMMITS",
                     "fetcherConfigs": [
                         {
                             "fetcherId": "FT_REST_GITLAB_COMMITS",
-                            "fetcherConfig": {
-                                "baseUrl": "",
-                                "projectPath": "",
-                                "token": ""
-                            }
+                            "fetcherConfig": null
                         }
                     ],
-                    "processConfig": {
-                        "username": ""
-                    }
+                    "processConfig": null
                 },
                 "aggregation": {
                     "aggregatorType": "sum",

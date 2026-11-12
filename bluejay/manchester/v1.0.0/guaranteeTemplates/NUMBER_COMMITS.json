@@ -18,16 +18,10 @@
                     "fetcherConfigs": [
                         {
                             "fetcherId": "FT_REST_GITLAB_COMMITS",
-                            "fetcherConfig": {
-                                "baseUrl": "",
-                                "projectPath": "",
-                                "token": ""
-                            }
+                            "fetcherConfig": null
                         }
                     ],
-                    "processConfig": {
-                        "username": ""
-                    }
+                    "processConfig": null
                 },
                 "aggregation": {
                     "aggregatorType": "count",

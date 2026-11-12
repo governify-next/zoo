@@ -14,20 +14,14 @@
             "metricName": "COUNT_MERGE_REQUEST_OPENED_MEMBER",
             "metricConfig": {
                 "event": {
-                    "eventId": "EV_GITLAB_MERGE_REQUEST_OPENED",
+                    "eventId": "EV_GITLAB_MRS_OPENED",
                     "fetcherConfigs": [
                         {
-                            "fetcherId": "FT_REST_GITLAB_MERGE_REQUESTS",
-                            "fetcherConfig": {
-                                "baseUrl": "",
-                                "projectPath": "",
-                                "token": ""
-                            }
+                            "fetcherId": "FT_GQL_GITLAB_MERGE_REQUESTS",
+                            "fetcherConfig": null
                         }
                     ],
-                    "processConfig": {
-                        "username": ""
-                    }
+                    "processConfig": null
                 },
                 "aggregation": {
                     "aggregatorType": "count",
